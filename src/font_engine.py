@@ -7,7 +7,7 @@ class FontEngine:
 
     def __init__(self, font_size: int) -> None:
         
-        self.font = pg.font.Font('static/ZZYZX.TTF', font_size)
+        self.font = pg.font.Font(pg.font.get_default_font(), font_size)
 
     def render(self, text: str, color: WHITE) -> None:
         return self.font.render(text, True, color)

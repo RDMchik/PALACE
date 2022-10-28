@@ -14,8 +14,11 @@ class Camera:
         
         self.friction_active = False
 
-    def update_offset(self, delta, width) -> None:
+    def update_offset(self, delta, width, room) -> None:
         
+        if room == True:
+            return
+            
         if self.offset.x != self.original_offset.x:
 
             if self.offset.x < self.original_offset.x:
